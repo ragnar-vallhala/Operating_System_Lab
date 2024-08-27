@@ -1,0 +1,1 @@
+savedcmd_/home/ragnar/Documents/Notes/OS/Lab/Lab4/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/ragnar/Documents/Notes/OS/Lab/Lab4/Module.symvers -T /home/ragnar/Documents/Notes/OS/Lab/Lab4/modules.order -i Module.symvers -e 

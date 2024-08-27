@@ -1,0 +1,1 @@
+savedcmd_/home/ragnar/Documents/Notes/OS/Lab/Lab4/Vishwakarma_2022UCS0083_Lab4/Proc_Module/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/ragnar/Documents/Notes/OS/Lab/Lab4/Vishwakarma_2022UCS0083_Lab4/Proc_Module/Module.symvers -T /home/ragnar/Documents/Notes/OS/Lab/Lab4/Vishwakarma_2022UCS0083_Lab4/Proc_Module/modules.order -i Module.symvers -e 

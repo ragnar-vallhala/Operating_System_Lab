@@ -1,0 +1,1 @@
+savedcmd_/home/ragnar/Documents/Notes/OS/Lab/Lab4/kernel_mod.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/ragnar/Documents/Notes/OS/Lab/Lab4/kernel_mod.ko /home/ragnar/Documents/Notes/OS/Lab/Lab4/kernel_mod.o /home/ragnar/Documents/Notes/OS/Lab/Lab4/kernel_mod.mod.o
