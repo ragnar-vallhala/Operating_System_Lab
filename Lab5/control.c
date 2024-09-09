@@ -29,6 +29,13 @@ void* sub(void* args)
       return (void*)res;
 }
 
+void * result(void* args)
+{
+  int* nums = (int*)args;
+  int* result = (int*)malloc(sizeof(int));
+  *result = nums[0] + nums[1];
+  return (void*) result;
+}
 
 int main()
 {
@@ -41,20 +48,21 @@ int main()
       rc = pthread_create(&p1,NULL,add,NULL);  assert(rc==0);
       rc = pthread_create(&p2,NULL,sub,NULL);  assert(rc==0);
 
-      void *res1, *res2;
+      void *res1, *res2, *res3;
   
       rc = pthread_join(p1,&res1); assert(rc==0);
       rc = pthread_join(p2,&res2); assert(rc==0);
       
+      int nums[2] = {*(int*)res1, *(int*)res2};
+
+      rc = pthread_create(&last,NULL,result,nums);  assert(rc==0);
+      rc = pthread_join(last,&res3); assert(rc==0);
       
-      printf("The sum of the returned value is %d.\n", *(int*)res1 +*(int*)res2  );
-      
-      printf("Exiting the main program.\n");
-     
-      
+      printf("The final result is %d\n",*(int*)res3);
 
       free(res1);
       free(res2);
+      free(res3);
       
       return 0;
 }
